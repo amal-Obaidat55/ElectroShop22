@@ -1,0 +1,127 @@
+
+.card {
+    background-color: white;
+    border: 1px solid #dce2ea;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    font-family: Arial, sans-serif;
+}
+
+.card h2 {
+    font-size: 17px;
+    color: #172b45;
+    margin: 0 0 15px;
+    letter-spacing: 0.5px;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 20px 0;
+}
+
+.cart-info p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 15px;
+    margin: 22px 0;
+}
+
+.cart-info strong {
+    color: #172b45;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #f0fdf4;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.total span {
+    color: #334155;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.total strong {
+    color: #16803d;
+    font-size: 22px;
+}
+.card {
+    height: 100%;
+    background-color: white;
+    border: 1px solid #e0e5eb;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: #14283f;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 0 0 15px;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    opacity: 1;
+    margin: 20px 0;
+}
+
+.cart-info {
+    padding: 10px 0;
+}
+
+.cart-info p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #718096;
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.cart-info strong {
+    color: #14283f;
+    font-weight: bold;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #eaf3f1;
+    border: 1px solid #d2e5e1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: auto;
+}
+
+.total span {
+    color: #243447;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.total strong {
+    color: #28666e;
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -1,19 +1,32 @@
 <div class="details">
-
-    <h2>Product Details</h2>
-
+<h2>ELECTROSHOP • PRODUCT DETAILS</h2>
     <img [src]="productImage" width="200">
 
-    <h3>{{productName}}</h3>
+    <h3>{{name}}</h3>
 
-    <p>{{productDescription}}</p>
+    <p class="description">{{description}}</p>
 
-    <p>Price: {{productPrice}} JOD</p>
+    <div class="product-info">
+        <p>Price: {{price}} JOD</p>
+        <p>Discount: {{discountPercentage}}%</p>
+        <p>Available: {{available}}</p>
+    </div>
+    
 
-    <p>Quantity: {{quantity}}</p>
+    
+    <div class="actions">
+        <div class="quantity-control">
+            <button (click)="increase()">+</button>
+            <span>{{quantity()}}</span>
+            <button (click)="decrease()">-</button>
 
-    <p>Discount: {{discountPercentage}}%</p>
 
-    <p>Available: {{isAvailable}}</p>
+        </div>
+                <button class="add-btn" (click)="addToCart()">Add to cart</button>
+
+    </div>
+
+
+    
 
 </div>

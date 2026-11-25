@@ -2,4 +2,39 @@
     margin-left: 2px;
     text-align: center;
     padding: 25px;
+}div {
+    background: linear-gradient(135deg, #14283f, #28666e);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: normal;
+    color: #d1e2e5;
+    margin: 15px 0 0;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
 }
