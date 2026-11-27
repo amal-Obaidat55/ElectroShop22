@@ -30,3 +30,78 @@
 .product button:disabled {
     cursor: not-allowed;
 }
+
+.productsContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.products2 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    text-align: center;
+    align-content: space-between;
+    justify-content: center;
+    padding: 10px;
+}
+
+.products2 img {
+    width: 100%;
+    border-radius: 30px;
+
+}
+
+.products2 button {
+    border-radius: 30px;
+    width: 50%;
+    align-items: center;
+    margin-left: 25%;
+
+
+}
+
+
+
+.available {
+    background-color: #eaf3f1;
+    border: 3px solid #d2e5e1;
+}
+
+.notAvailable {
+    background-color: #f3eaea;
+    border: 3px solid #e5d2d2;
+}
+
+.discount {
+    background: linear-gradient(-45deg,
+            #fce6e6,
+            #ff9292,
+            #ffffff,
+            #fcbbbb);
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.premuim {
+    border: 10px solid #ffe65b !important;
+    background-color: #f3f2ea !important;
+
+
+}

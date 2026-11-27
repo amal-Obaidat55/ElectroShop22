@@ -11,4 +11,7 @@ export class ShoppingCart {
   @Input() productQuantity = 0;
   @Input() productPrice = 0;
   @Input() total = 0;
+
+  orderStatus : string ="Pending";
+
 }

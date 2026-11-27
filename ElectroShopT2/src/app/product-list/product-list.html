@@ -13,9 +13,7 @@
 
             <h4>{{products[0].price}} JOD</h4>
 
-            <button
-                [disabled]="!products[0].isAvailable"
-                (click)="buyProduct(products[0].name)">
+            <button [disabled]="!products[0].isAvailable" (click)="buyProduct(products[0].name)">
                 Buy Now
             </button>
         </div>
@@ -30,9 +28,7 @@
 
             <h4>{{products[1].price}} JOD</h4>
 
-            <button
-                [disabled]="!products[1].isAvailable"
-                (click)="buyProduct(products[1].name)">
+            <button [disabled]="!products[1].isAvailable" (click)="buyProduct(products[1].name)">
                 Buy Now
             </button>
         </div>
@@ -47,9 +43,7 @@
 
             <h4>{{products[2].price}} JOD</h4>
 
-            <button
-                [disabled]="!products[2].isAvailable"
-                (click)="buyProduct(products[2].name)">
+            <button [disabled]="!products[2].isAvailable" (click)="buyProduct(products[2].name)">
                 Buy Now
             </button>
         </div>
@@ -64,9 +58,7 @@
 
             <h4>{{products[3].price}} JOD</h4>
 
-            <button
-                [disabled]="!products[3].isAvailable"
-                (click)="buyProduct(products[3].name)">
+            <button [disabled]="!products[3].isAvailable" (click)="buyProduct(products[3].name)">
                 Buy Now
             </button>
         </div>
@@ -81,13 +73,67 @@
 
             <h4>{{products[4].price}} JOD</h4>
 
-            <button
-                [disabled]="!products[4].isAvailable"
-                (click)="buyProduct(products[4].name)">
+            <button [disabled]="!products[4].isAvailable" (click)="buyProduct(products[4].name)">
                 Buy Now
             </button>
         </div>
 
+    </div>
+
+    <div>
+
+        <button (click)="showAll()">All Products</button>
+        <button (click)="showElec()">Electronics</button>
+        <button (click)="showAccess()">Accessories</button>
+
+    </div>
+    <h5>{{message}}</h5>
+    <div class="productsContainer">
+        @for(product of filteredProducts; track product.id)
+        {
+
+        <div class="products2" [ngClass]="{ 'available' : product.isAvailable,
+        'notAvailable':!product.isAvailable,
+        'discount' : product.discount>0,
+        'premuim' : product.price > 500}" [ngStyle]="{'opacity.%':product.isAvailable? 100 : 50}">
+            <img [src]="product.imgUrl" width="200" height="200">
+            <h2>{{product.name}}</h2>
+            <h5>{{product.category}}</h5>
+            <br>
+            <div>
+                @if(product.isAvailable)
+                {
+                <p>Availablity: In Stock </p>
+                }
+                @else{
+                <p>Availablity: Out of Stock </p>
+                }
+                @if(product.price > 500)
+                {
+                @if(product.discount > 0)
+                {
+                <h5 [ngStyle]="{'color':'red' , 'font-size.px':30 , 'font-weight' : 'bold'}">{{product.price}} JD</h5>
+                <p>Special Offer: {{product.discount}}%</p>
+                }
+                @else{
+                <h5>{{product.price}} JD</h5>
+                <p>No Offer</p>
+                }
+                <p>Premium product</p>
+                }
+                @else{
+                <h5 [ngStyle]="{'color':'red'}">{{product.price}} JD</h5>
+                <p>Special Offer: {{product.discount}}%</p>
+                }
+
+
+            </div>
+
+            <button [disabled]="!product.isAvailable">
+                Buy Now
+            </button>
+        </div>
+        }
     </div>
 
 </div>

@@ -1,4 +1,3 @@
-
 <div class="card">
 
     <h2>🛒 SHOPPING CART</h2>
@@ -21,5 +20,35 @@
         <span>Total Price:</span>
         <strong>{{total}} JOD</strong>
     </div>
+
+    <div>
+        <br>
+        <h2>Previous Order</h2>
+        @switch(orderStatus)
+        {
+        @case('Pending'){
+        <p>Your order is waiting for confirmation.</p>
+        }
+        @case('Processing'){
+        <p>Your order is being prepared.</p>
+
+        }@case('Shipped')
+        {
+        <p>Your order has been shipped.</p>
+        }
+        @case('Delivered')
+        {
+        <p>Your order has been delivered.</p>
+        }
+        @default{
+        <p>Unknown order status.</p>
+        }
+        }
+
+
+
+
+    </div>
+
 
 </div>
